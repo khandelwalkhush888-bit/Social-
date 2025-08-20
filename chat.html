@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyKhush - Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="chat.html">Chat</a>
+    <a href="profile.html">Profile</a>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <div class="chat-box">
+    <h2>Chat</h2>
+    <div id="chatMessages" class="messages"></div>
+    <input type="text" id="chatInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <!-- Your Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAIAcKkL48bW6ZeDfkG_plG3LJKokJ3TEk",
+      authDomain: "my-khush-50269.firebaseapp.com",
+      databaseURL: "https://my-khush-50269-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "my-khush-50269",
+      storageBucket: "my-khush-50269.firebasestorage.app",
+      messagingSenderId: "292934349732",
+      appId: "1:292934349732:web:cbe5e1ac87caf055b48731",
+      measurementId: "G-4TM92VJX29"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
