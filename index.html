@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyKhush - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to MyKhush</h1>
+    <div class="form">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+  <!-- Your Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAIAcKkL48bW6ZeDfkG_plG3LJKokJ3TEk",
+      authDomain: "my-khush-50269.firebaseapp.com",
+      databaseURL: "https://my-khush-50269-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "my-khush-50269",
+      storageBucket: "my-khush-50269.firebasestorage.app",
+      messagingSenderId: "292934349732",
+      appId: "1:292934349732:web:cbe5e1ac87caf055b48731",
+      measurementId: "G-4TM92VJX29"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
